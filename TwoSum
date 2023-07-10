@@ -2,10 +2,10 @@
 // Use this editor to write, compile and run your Java code online
 import java.util.*;
 
-class HelloWorld {
+class TwoSum {
     public static void main(String[] args) {
         int arr[] = new int[]{2, 7, 11, 15, 5};
-        HelloWorld obj = new HelloWorld();
+        TwoSum obj = new TwoSum();
         boolean v1Output = obj.twoSumV1(arr, 20);
         System.out.println("V1Output Valid case: " + v1Output);
         v1Output = obj.twoSumV1(arr, 21);
