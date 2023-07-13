@@ -5,7 +5,7 @@ public class Find {
     add character by character to current window till we found repeating char
     reduce current window start Index with max of last occurrence of this character or startof current window
     */
-    public static String longestNonRepeatingCharacterSubstring(String str)
+    public static String longestSubstringWithoutRepeatingCharacters(String str)
     {
         //store last position of occurrence
         Map<Character, Integer> lastIndex = new HashMap<>();
@@ -37,7 +37,7 @@ public class Find {
         String str = "abcabcbb";
         System.out.println("Input string: " + str);
  
-        String len = longestNonRepeatingCharacterSubstring(str);
+        String len = longestSubstringWithoutRepeatingCharacters(str);
         System.out.println("longest non-repeating character substring: " + len);
     }
 }
