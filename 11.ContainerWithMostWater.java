@@ -31,3 +31,8 @@ public class ContainerWithMostWater {
         }
     }
 }
+
+/*
+Time Complexity: O(N) N is number of elements in Array
+Space Complexity: O(1)
+*/
