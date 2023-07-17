@@ -41,3 +41,8 @@ public class Find {
         System.out.println("longest non-repeating character substring: " + len);
     }
 }
+
+/**
+Time Complexity: O(N)
+Space complexity: O(N + N) (number of unique characters in string + string window without repeating characters)
+*/
