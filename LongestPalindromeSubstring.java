@@ -38,3 +38,7 @@ public class LongestPalindromeSubstring {
         }
     }
 }
+/**
+Time complexity: O(N^2), where N is the length of the input string
+Auxiliary Space: O(1)
+*/
