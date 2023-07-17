@@ -56,4 +56,7 @@ For row = 1 => j = 1, 7, 13
 For row = 2 => j = 2, 8
 For row = 3 => j = 3, 9
 (j + step - 2 * row)
+
+Time Complexity: O(N)
+Space Complexity: O(1)
 */
