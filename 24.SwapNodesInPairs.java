@@ -1,58 +1,32 @@
 public class PairNodesSwap {
-    class Node {
-        int data;
-        Node next;
-
-        public Node(int data) {
-            this.data = data;
-            this.next = null;
+    public ListNode swapPairs(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
         }
-    }
-
-    Node head;
-    public void printList() {
-        Node node = head;
-        while (node != null) {
-            System.out.print(node.data + "->");
-            node = node.next;
+        ListNode dummyNode = new ListNode();
+        dummyNode.val = 0;
+        ListNode prevNode = dummyNode;
+        ListNode currNode = head;     
+        while (currNode != null && currNode.next != null) {            
+            prevNode.next = currNode.next;
+            currNode.next = prevNode.next.next;
+            prevNode.next.next = currNode;
+            prevNode = currNode;
+            currNode = currNode.next;
         }
-        System.out.print("null\n");
-    }
-
-    public void push(int data) {
-        Node node = new Node(data);
-        node.next = head;
-        head = node;
-    }
-
-    public void pairSwap() {
-        Node temp = head;
-        while (temp != null && temp.next != null) {
-            int currData = temp.data;
-            temp.data = temp.next.data;
-            temp.next.data = currData;
-            temp = temp.next.next;
-        }
-    }
-
-    public static void main(String []args) {
-        int k = 3;
-        PairNodesSwap obj = new PairNodesSwap();
-        obj.push(5);
-        obj.push(4);
-        obj.push(3);
-        obj.push(2);
-        obj.push(1);
-
-        System.out.print("Original List: ");
-        obj.printList();
-        obj.pairSwap();
-        System.out.print("\nPair Swap List: ");
-        obj.printList();
+        return dummyNode.next;
     }
 }
+/*
+Input: head = [1,2,3,4]
+Output: [2,1,4,3]
 
-/**
- * Time Complexity: O(N)
- * Space Complexity: O(1)
- */
+Input: head = []
+Output: []
+
+Input: head = [1]
+Output: [1]
+
+Time Complexity: O(N)
+Space Complexity: O(1)
+*/
