@@ -1,4 +1,3 @@
-import java.util.*;
 public class ContainerWithMostWater {
    public int maxArea(int[] height) {
         int size = height.length;
