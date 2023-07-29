@@ -19,11 +19,8 @@ public class ContainerWithMostWater {
 }
 
 /*
-Input: height = [1,8,6,2,5,4,8,3,7]
-Output: 49
-
-Input: height = [1,1]
-Output: 1
+Input: height = [1,8,6,2,5,4,8,3,7] Output: 49
+Input: height = [1,1] Output: 1
 
 Time Complexity: O(N) N is number of elements in Array
 Space Complexity: O(1)
